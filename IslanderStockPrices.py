@@ -10,7 +10,7 @@ class NetworkError(Exception):
 class Price:
     '''this class is going to web scrap yahoo finance to get the price
     as well as the current percentage'''
-    def __init__(self,symbol,maximum):
+    def __init__(self,symbol):
         try:
             headers={'User-Agent':'Mozilla/5.0'}
 
@@ -29,7 +29,7 @@ class Price:
                 raise StockDoesNotExistError(symbol)
         self.symbol = symbol
         # print(symbol)
-        self.maximum = maximum
+        
 
     def Price(self):
         '''the purpose of this method is to get the current price'''
